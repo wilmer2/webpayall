@@ -23,30 +23,73 @@ p {
 }
 
 .header {
-  height: 25px;
+  height: 30px;
   background: #0C2950;
   position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%
+  width: 100%;
+  z-index: 2;
 }
 
 .menu {
   position: absolute;
+  display: inline-block;
   right: 0;
-  margin: 3px 15px 2px 0;
+  margin: 6px 25px 2px 0;
 }
-
 
 .menu li {
   display: inline-block;
-  margin-left: 30px;
+  margin-left: 25px;
   color: white;
 }
 
 .u-item, .u-item:hover, .u-item:visited, .u-item:active , .u-item:link {
   color: white;    /*#BD382A;*/
   text-decoration: none;
+}
+
+.presenter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 200px;
+}
+
+
+.container-device {
+  display: flex;
+  margin: 60px 80px 0 0;
+}
+
+.container-portatil-device {
+  margin: 50px 0 50px 20px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  position: relative;
+}
+
+.device.b {
+  position: absolute;
+  top: 80px;
+  left: 50px;
+}
+
+.device.c {
+  position: absolute;
+  top: 140px;
+  left: 150px;
+}
+
+.presenter h2 {
+  color: white;
+  background: #0C2950;
+  padding: 5px 0 5px 40px; 
+}
+
+.presenter h2:last-child {
+  background:  #BD382A;
 }
 
 
