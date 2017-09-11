@@ -16,6 +16,40 @@ p {
 	font-size: 18px;
 }
 
+.main-container {
+  margin: auto;
+  max-width: 800px;
+  position: relative;
+}
+
+.header {
+  height: 25px;
+  background: #0C2950;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  margin: 3px 15px 2px 0;
+}
+
+
+.menu li {
+  display: inline-block;
+  margin-left: 30px;
+  color: white;
+}
+
+.u-item, .u-item:hover, .u-item:visited, .u-item:active , .u-item:link {
+  color: white;    /*#BD382A;*/
+  text-decoration: none;
+}
+
+
 
 /*.u-secundarycolor {
 	background: #C0392B;
