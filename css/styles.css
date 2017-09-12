@@ -130,7 +130,7 @@ p {
   background: #ECF0F1;
   color: #919094;
   text-align: center;
-  padding: 80px 18px;
+  padding: 80px 8px;
 
 }
 
@@ -154,6 +154,69 @@ p {
   margin-top: 20px;
 }
 
+.product {
+  background: url("../img/telephon.jpg");
+  background-size: cover;
+  color: black;
+  text-align: center;
+  padding: 100px 18px;
+}
+
+.product-article-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product-article {
+  width: 250px;
+  background: rgba(176, 173, 175, .4);
+  padding: 20px 10px;
+  max-height: 300px;
+}
+
+.advantage {
+  background: url("../img/tec.jpg");
+  background-size: cover;
+  text-align: center;
+  color: grey;
+  height: 450px;
+}
+
+.advantage-container {
+  width: 320px;
+  padding: 20px;
+  line-height: 35px;
+  margin-top: 25px;
+}
+
+.advantage-container p {
+  margin-top: 20px;
+}
+
+.map img {
+  width: 100%;
+}
+
+.allies {
+  background: #ECF0F1;
+  text-align: center;
+  padding: 60px 18px;
+}
+
+.allies h2 {
+  color: grey;
+  margin: 0;
+}
+
+.allies-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/*154 151 157*/
 
 
 
