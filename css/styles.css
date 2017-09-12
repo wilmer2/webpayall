@@ -92,6 +92,41 @@ p {
   background:  #BD382A;
 }
 
+.informative {
+  color: white;
+  background: #0B223F;
+  text-align: center;
+}
+
+.informative h2 {
+  margin: 50px 0;
+  display: inline-block;
+}
+
+.informative-main-p {
+  padding: 0 100px;
+}
+
+.informative-container {
+  margin-top: 50px;
+  height: 300px;
+}
+
+.informative-article {
+  background: #6B7B92;
+  height: 220px;
+  width: 540px;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.informative-article p {
+  padding: 10px;
+  margin: auto;
+}
+
+
 
 
 /*.u-secundarycolor {
