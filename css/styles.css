@@ -126,6 +126,35 @@ p {
   margin: auto;
 }
 
+.benefits {
+  background: #ECF0F1;
+  color: #919094;
+  text-align: center;
+  padding: 80px 18px;
+
+}
+
+.benefits h2 {
+  display: inline-block;
+}
+
+.benefits-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  height: 220px;
+}
+
+.benefits-article {
+  width: 320px;
+}
+
+.benefits-article p {
+  margin-top: 20px;
+}
+
+
 
 
 
