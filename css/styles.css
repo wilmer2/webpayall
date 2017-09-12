@@ -159,11 +159,11 @@ p {
   background-size: cover;
   color: black;
   text-align: center;
-  padding: 100px 18px;
+  padding: 70px 18px;
 }
 
 .product-article-container {
-  margin-top: 60px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -214,6 +214,58 @@ p {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.contact {
+  background: #133D76;
+  color: white;
+  text-align: center;
+  padding: 30px 18px;
+}
+
+.contact h2 {
+  margin-bottom: 40px;
+}
+
+.container-contact-main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact input {
+  color: black;
+  font-weight: bold;
+}
+
+.container-form , .container-contact {
+  width: 350px;
+}
+
+.container-contact {
+  padding-top: 80px;
+}
+
+.contact button {
+  background: #1D63A8;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
 
 /*154 151 157*/
