@@ -268,6 +268,103 @@ p {
   border-radius: 4px;
 }
 
+.footer {
+  background:  #0C2950;
+  color: white;
+  height: 200px;
+  padding: 50px 18px;
+}
+
+
+.link-circle {
+  display: inline-block;
+  background-color: rgb(219, 82, 82);
+  border-radius:50%;
+  width:30px;
+  height:30px;
+  text-align:center;
+}
+
+.footer .fa {
+   line-height:30px;
+   font-size: 12px;
+}
+
+.main-container-footer {
+  margin: 0 auto;
+  width: 1000px;
+  position: relative;
+}
+
+
+.footer-logo {
+  position: absolute;
+  top: 20px;
+  left:  0;
+}
+
+.container-footer-link {
+  display: inline-block;
+  margin-left: 230px;
+}
+
+
+
+/*.container-footer-link {
+  display: inline-block;
+  margin-left: 60px;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-left: 200px;
+  margin-bottom: 20px;
+}*/
+
+.container-footer {
+  display: flex;
+  align-items: flex-start;
+  padding:20px 30px 0 0;
+}
+
+
+.phone, .email {
+  position: relative;
+}
+
+.phone p {
+  width: 200px;
+  margin-left: 40px;
+  display: inline-block;
+}
+
+.email p {
+  width: 250px;
+  margin-left: 40px;
+  display: inline-block;
+}
+
+.align-paragraph-footer {
+  position: absolute;
+  top: 10px;
+}
+
+.social-network-link .link-circle {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+
+
+/*.footer a {
+  width: 28px;
+  text-align: center;
+  margin-right: 2px;
+  border-radius: 33px;
+  background: rgb(219, 82, 82);
+  padding: 7px 6px;
+}*/
+
 /*154 151 157*/
 
 
