@@ -583,10 +583,16 @@ p {
    -ms-animation-delay: 2.7s;
 }
 
-.presenter h2 {
+.presenter-title-a  {
    -webkit-animation-delay: 3s;
    -moz-animation-delay: 3s;
    -ms-animation-delay: 3s;
+}
+
+.presenter-title-b {
+   -webkit-animation-delay: 4s;
+   -moz-animation-delay: 4s;
+   -ms-animation-delay: 4s;
 }
 
 .informative-p {
@@ -623,21 +629,21 @@ p {
 
 
 .product-article.b {
-   -webkit-animation-delay: .3s;
-   -moz-animation-delay: .3s;
-   -ms-animation-delay: .3s;
+   -webkit-animation-delay: .4s;
+   -moz-animation-delay: .4s;
+   -ms-animation-delay: .4s;
 }
 
 .product-article.c {
-   -webkit-animation-delay: .5s;
-   -moz-animation-delay: .5s;
-   -ms-animation-delay: .5s;
+   -webkit-animation-delay: .8s;
+   -moz-animation-delay: .8s;
+   -ms-animation-delay: .8s;
 }
 
 .product-article.d {
-   -webkit-animation-delay: .7s;
-   -moz-animation-delay: .7s;
-   -ms-animation-delay: .7s;
+   -webkit-animation-delay: 1.2s;
+   -moz-animation-delay: 1.2s;
+   -ms-animation-delay: 1.2s;
 }
 
 /*.allies-img {
