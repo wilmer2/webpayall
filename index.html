@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="header">
+    <span  class="burguer-button" id="burguer-button">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </span>
     <nav class="menu">
       <ul>
         <li> 
@@ -50,10 +53,10 @@
   <section class="presenter"><!--presente-->
     <div class="presenter-container">
       <figure class="logo">
-      <img src="img/logo.png" alt="logo payall" />
+      <img src="img/logo.png" alt="logo payall"  />
     </figure>
     <div class="container-device"> <!--container-presenter-img-->      
-      <img src="img/kiosco.png" alt="Quiosco payall" />
+      <img src="img/kiosco.png" class="quiosco-img"alt="Quiosco payall" />
       <div class="container-portatil-device">
         <img src="img/celular.png" class="device" alt="celular"  height="230" />
         <img src="img/tablet.png" class="device b" alt="tablet" width="210"/>
@@ -69,13 +72,13 @@
     <p class="informative-main-p">Somos una empresa  proveedora de soluciones tecnol&oacute;gicas. Ofrecemos asistencia de recaudaci&oacute;n de pago procesos de intermedaci&oacute;n y venta de servicios de publicidad web. Iniciamos nuestro compromiso en el año 2011, gracias a emprendedores venezolanos con conocimientos de Innovaci&oacute;n Tecnol&oacute;gicas  que d&iacute;a a d&iacute;a trabajan por la calidad de nuestra plataforma</p>
     <div class="informative-container">
       <article class="informative-article">
-        <h3><i class="fa fa-rocket" aria-hidden="true"></i> Misi&oacute;n</h3>
-        <p>Desarrollar soluciones de pago electr&oacute;nico de alta tecnolog&iacute;a eficientes, eficaces y confiables, con nuestros
+        <h3 class="informative-title animated"><i class="fa fa-rocket" aria-hidden="true"></i> Misi&oacute;n</h3>
+        <p class="informative-p animated">Desarrollar soluciones de pago electr&oacute;nico de alta tecnolog&iacute;a eficientes, eficaces y confiables, con nuestros
           equipo de elevada calidad  que maximizan la satisfacci&oacute;n de nuestros clientes.</p>
       </article>
       <article class="informative-article">
-        <h3><i class="fa fa-eye" aria-hidden="true"></i> Visi&oacute;n</h3>
-        <p>Ser una empresa global, vanguardista e innovadora, lider en el mercado de productos y servicios tecnol&oacute;gicos comprometida
+        <h3 class="informative-title animated"><i class="fa fa-eye" aria-hidden="true"></i> Visi&oacute;n</h3>
+        <p class="informative-p animated">Ser una empresa global, vanguardista e innovadora, lider en el mercado de productos y servicios tecnol&oacute;gicos comprometida
             con el desarrolo de competencias profesionales y personales de nuestros trabajadores</p>
       </article>
     </div>
@@ -160,25 +163,25 @@
   <div class="container-contact-main main-container">
     <div class="container-form">
      <h2>Cont&aacute;ctanos</h2>
-     <form class="form">
+     <form class="form" id="form">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Nombre">
+        <input type="text" class="form-control" placeholder="Nombre" required>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Apellido">
+        <input type="text" class="form-control" placeholder="Apellido" required>
       </div>
       <div class="form-group">
-        <input type="email" class="form-control" placeholder="Correo">
+        <input type="email" class="form-control" placeholder="Correo" required>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Observaciones">
+        <input type="text" class="form-control" placeholder="Observaciones" required>
       </div>
       <button class="pull-right">enviar</button>
      </form>
     </div>
     <div class="container-contact">
       <h2>Trabaja con nosotros</h2>
-      <button>formulario</button>
+      <button id="btnForm">formulario</button>
     </div>
   </div>
   </section>
@@ -241,19 +244,27 @@
 
  <script>
   $(function () {
+     var consulta = window.matchMedia('(max-width: 650px)');
+     var $header = $('#header');
+     var $burguerButton = $('#burguer-button');
      var $btnForm = $('#btnForm');
-     var $formSend = $('#sendForm');
+     var $formSend = $('#form');
+
      var scroll = new SmoothScroll('a[href*="#"]', {
         speed: 700 
      });
 
-    
-     $('.InfoGeneral-description').waypoint(function() {
-         var $description = $('.InfoGeneral-description');
-         var classDescription = 'fadeInUp';
-         var $title = $('.InfoGeneral-title')
-         var classTitle = 'fadeIn';
 
+     consulta.addListener(mediaquery);
+
+    
+     $('.informative-container').waypoint(function() {
+         var $title = $('.informative-title')
+         var classTitle = 'fadeIn';
+         var $description = $('.informative-p');
+         var classDescription = 'fadeInUp';
+          
+          console.log('test');
          checkClassName($title, classTitle);
          checkClassName($description, classDescription);
      }, {
@@ -313,6 +324,19 @@
         }
      }
 
+     function toogleMenu() {
+       $header.toggleClass('active');
+     }
+
+
+     function mediaquery () {
+        if (consulta.matches) {
+          $burguerButton.on('click', toogleMenu);
+        } else {
+          $burguerButton.off('click', toogleMenu);
+        }
+     }
+
     
      $formSend.on('submit', function (e) {
         e.preventDefault();
@@ -324,36 +348,6 @@
      $btnForm.on('click', function (e) {
        $formSend.find('input').first().focus(); 
      });
-
-      /*$('.Presenter-carousel').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-         responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-            }
-        }, {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }]
-    });*/
-
 
   });
  </script>
