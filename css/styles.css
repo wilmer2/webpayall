@@ -90,7 +90,7 @@ input[type="text"],
 /* main styles*/
 .slick-prev {
   margin-left: 40px;
-  z-index: 300;
+  z-index: 2;
 }
 
 .slick-next {
@@ -108,12 +108,23 @@ input[type="text"],
   position: relative;
 }
 
+.background-main {
+  background: #ECF0F1;
+}
+
+.max-container {
+  margin: auto;
+  max-width: 1440px;
+  
+}
+
 .header {
-  height: 30px;
+  height: 40px;
   background: #0C2950;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
+  font-size: 16px;
 }
 
 .burguer-button {
@@ -138,7 +149,7 @@ input[type="text"],
   position: absolute;
   display: inline-block;
   right: 0;
-  margin: 6px 25px 2px 0;
+  margin: 10px 25px 20px 0;
 }
 
 .menu i {
@@ -256,29 +267,35 @@ input[type="text"],
 }
 
 .adventage {
-  background: url("../img/tec.jpg");
+  background-color: #ECF0F1;
+  background-image: url("../img/tec.jpg");
   background-size: cover;
   color: #6D6D6D;
   font-size: 20px;
   position: relative;
   height: 500px;
+  overflow: hidden;
 }
 
 
 .adventage-container {
   position: absolute;
-  top: 40px;
-  right: 200px;
-  width: 400px;
+  top: 50px;
+  right: 190px;
+  width: auto;
   line-height: 40px;
   font-weight: 500;
   text-align: center;
-  padding: 0 60px;  
+  padding: 0;
 }
 
+.adventage-container ul {
+  list-style: none;
+  padding: 0;
+}
 
-.adventage-container p {
-  margin-top: 30px;
+.map {
+  background: #0C2950;
 }
 
 .map img {
@@ -299,7 +316,10 @@ input[type="text"],
 .allies-container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
+  padding: 20px 0;
+
 }
 
 .contact {
@@ -391,7 +411,6 @@ input[type="text"],
   align-items: center;
 }
 
-
 .container-footer {
   display: flex;
   align-items: center;
@@ -400,14 +419,12 @@ input[type="text"],
   
 }
 
-
 .social-network {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 400px;
 }
-
 
 .footer-link {
   display: flex;
@@ -416,12 +433,10 @@ input[type="text"],
   
 }
 
-
 .footer-item ul {
-  margin-left: 10px;
+  margin-left: 8px;
   padding: 0;
 }
-
 
 
 /*screen 860px */
@@ -461,7 +476,8 @@ input[type="text"],
 
   .adventage-container {
     color: white;
-    right: 400px;
+    right: 250px;
+    top: 20px;
   }
 
   .main-container-footer {
@@ -477,7 +493,6 @@ input[type="text"],
     align-items: flex-start;
   }
 
-  
 
   .social-network {
     margin-top: 20px;
@@ -494,6 +509,7 @@ input[type="text"],
      height: auto;
      left: -100%;
      transition: .3s;
+     font-size: 18px;
    }
 
    .header.active {
@@ -502,12 +518,17 @@ input[type="text"],
 
 
    .menu {
-     margin-top: 30px;
-     position: static;
-     text-align: center;
-     display: block;
-     font-size: 20px;
      padding: 0;
+     position: static;
+     display: flex;
+     justify-content: center;
+   }
+
+   .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
    }
 
 
@@ -517,9 +538,8 @@ input[type="text"],
    }
 
    .menu li {
-     display: block;
      margin-left: 0;
-     padding: 10px;
+     padding: 15px;
    }
 
    .burguer-button {
@@ -566,12 +586,16 @@ input[type="text"],
   }
 
   .adventage {
-    overflow: hidden;
+    height: auto;
+    background: #0B223F;
   }
 
   .adventage-container {
+    display: flex;
     position: static;
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .main-container-footer {
@@ -611,15 +635,16 @@ input[type="text"],
     text-align: justify;  
   }
 
+  .contact {
+    padding: 50px 20px;
+  }
+
   .container-form, .container-contact {
     width: 100%;
   }
 
 
-  .adventage {
-    height: auto;
-    background: #0B223F;
-  }
+
 
   .adventage-container {
     width: 100%;
@@ -646,10 +671,11 @@ input[type="text"],
 
   .main-container-footer {
     align-items: flex-start;
-    padding-left: 40px;
+    padding-left: 30px;
   }
 
   .social-network {
+    width: auto;
     justify-content: flex-start;
   }
 
