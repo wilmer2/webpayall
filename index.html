@@ -22,11 +22,17 @@
     </span>
     <nav class="menu">
       <ul class="header-number">
-        <li>
-          (+58) (281) 5140024  
+        <li class="item-number">
+          <i class="fa fa-phone fa-fw"></i>
+          <span>  
+            (+58)(281) 5140024 
+          </span> 
         </li>
-        <li>
-          (+58) (281) 514.6729
+        <li class="item-number">
+          <i class="fa fa-phone fa-fw"></i>
+          <span>  
+            (+58)(281) 514.6729
+          </span>
         </li>
       </ul>
       <ul>
@@ -134,7 +140,7 @@
       </div>
     </div>
   </section>
-  <section class="product background-main" id="productos"><!--product-->
+  <section class="product" id="productos"><!--product-->
    <div class="product-article-container">
       <article class="product-article a transition animated">
       <img src="img/icono-quiosco.png" alt="Quiosco"  />
@@ -144,20 +150,17 @@
     <article class="product-article b  transition animated">
       <img src="img/icono-desktop.png" alt="Desktop" />
       <h3>Web</h3>
-      <p class="product-move-p">P&aacute;gina web diseñada para recargas de saldo, de f&aacute;cil instalaci&oacute;n, adem&aacute;s de funcionar en distintos sistemas operativo.</p>
+      <p>P&aacute;gina web diseñada para recargas de saldo, de f&aacute;cil instalaci&oacute;n, adem&aacute;s de funcionar en distintos sistemas operativo.</p>
     </article>
     <article class="product-article c transition animated">
       <img src="img/icono-movil.png" alt="Web" />
       <h2>App</h2>
-      <p class="product-move-p">Aplicaci&oacute;n descargable que permite realizar recargas desde cualquier dispositivo Android.</p>
+      <p>Aplicaci&oacute;n descargable que permite realizar recargas desde cualquier dispositivo Android.</p>
     </article>
     <article class="product-article d transition animated">
-      <div class="product-article-header">
-        <img src="img/icono-web.png" alt="App" />
-         <h2>Publicidad</h2>
-      </div>
-      
-      <p class="product-move-p">Nuestro quiosco de autogesti&oacute;n est&aacute; diseñado para brindar servicios de publicidad a trav&eacute;s de pantallas digitales de alta resoluci&oacute;n.</p>
+      <img src="img/icono-web.png" alt="App" />
+      <h2>Publicidad</h2>
+      <p>Nuestro quiosco de autogesti&oacute;n est&aacute; diseñado para brindar servicios de publicidad a trav&eacute;s de pantallas digitales de alta resoluci&oacute;n.</p>
     </article>
    </div>
   </section>
@@ -167,7 +170,7 @@
         <h2>Ventajas</h2>
         <ul>
           <li>
-            Plataforma Multicursal 
+            Plataforma Multisucursal 
           </li>
           <li>
             Visualizaci&oacute;n del estado de cuenta
@@ -266,10 +269,10 @@
                     Venezuela
                   </li>
                   <li>
-                    (+58) (281) 514.6729
+                    (+58)(281) 514.6729
                   </li>
                   <li>
-                    (+58) (281) 5140024 
+                    (+58)(281) 5140024 
                   </li>
                 </ul>
               </div>
@@ -333,11 +336,11 @@
             Copyright 2017 Payall
            </span>
           </div> 
-
+                
            <div class="floating-button-options">  
-             <a href="http://android.payall.com.ve/" class="btn btn-success btn-sm">
+             <a href="http://74.81.77.204/settings/apk/download" class="btn btn-success btn-sm">
                <i class="fa fa-download" aria-hidden="true"></i>
-                Descargue aplicaci&oacute;n
+                Descargue app
               </a>
               <button id="btn-captacion" class="btn btn-primary btn-sm">
                <i class="fa fa-fw fa-money"></i>
@@ -356,7 +359,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4>Recarga con nosotros</h4>
       </div>
-      <div class="alert  modal-message" id="catchment-result-message">
+      <div class="alert modal-message" id="catchment-result-message">
        <strong class="title-alert"></strong>
        <p></p>
      </div>
@@ -403,6 +406,19 @@
             <option value="zulia">Zulia</option>
           </select>
         </div>
+        <div class="form-group">
+          <label for="estado">Cómo supiste de Payall?</label>
+          <select name="site_captacion[medio]" class="form-control" required id="site_captacion_medio">
+            <option value="publicidad">Publicidad</option>
+            <option value="máquina">Máquina</option>
+            <option value="página web">Página web</option>
+            <option value="facebook">Facebook</option>
+            <option value="twitter">Twitter</option>
+            <option value="instagram">Instragram</option>
+            <option value="amigo">Un Amigo</option>
+
+          </select>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -438,7 +454,7 @@
      var $catchmentBoxMessage = $('#catchment-result-message');            
      var $body = document.body;  //Se usa vainilla para compatibilidad con Hammer
      var gestos = new Hammer($body);
-     var baseUrl = 'http://74.81.77.204';
+     var baseUrl = 'http://http://74.81.77.204';
      var messageProblemConexion = 'En estos momentos no es posible acceder a la plataforma, por favor intente en otro momento';
      var titleProblemConexion = 'Problemas de conexión';
      var titleDataSave = 'Solicitud realizada';
@@ -611,7 +627,7 @@
     $formSend.on('submit', function (e) {
         e.preventDefault();
 
-        var url = 'http://localhost/payall_estable/web/app_dev.php' + '/site/contacto';
+        var url = baseUrl + '/site/contacto';
         var $form = $(this);
         var $button = $form.find('button[type="submit"]');
         var data = $form.serialize();
