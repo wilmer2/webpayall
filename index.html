@@ -244,8 +244,10 @@
      </form>
     </div>
     <div class="container-contact">
-      <h2>Trabaja con nosotros</h2>
-      <button id="btnForm" class="custom-button">Formulario</button>
+      <button class="btn btn-primary btn-lg btn-recarga">
+        <i class="fa fa-fw fa-money"></i>
+        Recarga con nosotros
+      </button>
     </div>
   </div>
   </section>
@@ -281,7 +283,7 @@
           <div class="footer-item">  
             <a href="mailto:@payall.com.ve" class="u-item">
               <div class="email footer-link">
-                <div class="link-circle align-paragraph-footer"> 
+                <div class="link-circle"> 
                   <i class="fa fa-envelope" aria-hidden="true"></i>
                 </div>
                 <ul>
@@ -340,7 +342,7 @@
                <i class="fa fa-download" aria-hidden="true"></i>
                 Descargar app
               </a>
-              <button id="btn-captacion" class="btn btn-primary btn-sm">
+              <button  class="btn btn-primary btn-sm btn-recarga">
                <i class="fa fa-fw fa-money"></i>
                Recarga con nosotros
               </button>
@@ -417,8 +419,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
       </div>
     </form>
     </div><!-- /.modal-content -->
@@ -445,7 +447,6 @@
      var $boxModal = $('#boxModal');
      var $formSend = $('#form');
      var $formCaptacion = $('#form-captacion');
-     var $btnCaptacion = $('#btn-captacion');
      var $contactBoxMessage = $('#contact-result-message');
      var $catchmentBoxMessage = $('#catchment-result-message');            
      var $body = document.body;  //Se usa vainilla para compatibilidad con Hammer
@@ -615,7 +616,7 @@
 
     mediaquery();
      
-    $btnCaptacion.on('click', function (e) {
+    $('.btn-recarga').on('click', function (e) {
        e.preventDefault();
        $boxModal.modal('show');
     });
@@ -680,12 +681,8 @@
         })
     });
 
-     $btnForm.on('click', function (e) {
-       $formSend.find('input').first().focus(); 
-     });
-
-      gestos.on('swipeleft', hideMenu);
-      gestos.on('swiperight', showMenu);
+    gestos.on('swipeleft', hideMenu);
+    gestos.on('swiperight', showMenu);
 
   });
  </script>

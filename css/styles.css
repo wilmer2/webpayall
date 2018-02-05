@@ -307,10 +307,11 @@ p {
   background-size: cover;
   color: #6D6D6D;
   font-size: 20px;
-  height: 500px;
+  height: auto;
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
+  padding: 60px 0;
 }
 
 .adventage-container {
@@ -319,7 +320,6 @@ p {
    text-align: center;
    line-height: 40px;
    margin-right: 170px;
-   margin-top: 60px;
 }
 
 .adventage-container ul {
@@ -362,10 +362,6 @@ p {
   color: white;
   text-align: center;
   padding: 100px 18px;
-}
-
-.contact h2 {
-  margin-bottom: 40px;
 }
 
 .container-contact-main {
@@ -577,7 +573,7 @@ p {
   }
 
   .container-contact {
-    margin-top: 20px;
+    margin-top: 60px;
   }
 
   .adventage-container {
@@ -653,20 +649,25 @@ p {
 
  .informative-article:last-child {
     margin-left: 0;
- }
+  }
 
  .informative-article p {
     padding: 20px;
   }
 
   .adventage {
-    height: auto;
     background: #0B223F;
     justify-content: center;
+    padding: 0;
   }
 
   .adventage-container {
     margin: 20px 0 15px 0;
+  }
+
+  .allies-container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .main-container-footer {
@@ -676,7 +677,7 @@ p {
   }
 
   .footer-logo {
-    margin-right: 200px;
+    margin-right: 240px;
     margin-bottom: 30px;
   }
 
@@ -690,7 +691,6 @@ p {
     width: auto;
     margin-top: 8px;
   }
-
 }
 
 
@@ -699,6 +699,23 @@ p {
 @media screen and (max-width: 500px) {
   p {
     font-size: 16px;
+  }
+
+   .main-container-footer {
+    align-items: flex-start;
+    padding-left: 50px;
+  }
+
+  .social-network .link-circle.a, .social-network .footer-link.space  {
+    margin-left: 0;
+   } 
+
+  .social-network ul {
+    display: none;
+  }
+
+  .social-network .link-circle {
+    margin-left: 20px;
   }
 }
 
@@ -736,38 +753,10 @@ p {
     align-items: center;
   }
 
-  .allies-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .allies-item {
-    width: 50%;
-  }
-
-
   .main-container-footer {
-    align-items: flex-start;
     padding-left: 10px;
   }
 
-  .social-network {
-    width: auto;
-    justify-content: flex-start;
-  }
-
-  .social-network .link-circle.a {
-    margin-left: 0;
-  }
-
-  .social-network .link-circle {
-    margin-left: 20px;
-  }
-
-  .social-network ul {
-    display: none;
-  }
- 
 }
 
 
