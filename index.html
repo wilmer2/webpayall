@@ -141,7 +141,7 @@
     </div>
   </section>
   <section class="product" id="productos"><!--product-->
-   <div class="product-article-container">
+   <div class="product-article-container" >
       <article class="product-article a transition animated">
       <img src="img/icono-quiosco.png" alt="Quiosco"  />
       <h3>Autogesti&oacute;n</h3>
@@ -269,10 +269,10 @@
                     Venezuela
                   </li>
                   <li>
-                    (+58)(281) 514.6729
+                    (+58) (281) 514.6729
                   </li>
                   <li>
-                    (+58)(281) 5140024 
+                    (+58) (281) 5140024 
                   </li>
                 </ul>
               </div>
@@ -288,10 +288,9 @@
                   <li>Correos</li>
                   <li>info@payall.com.ve</li>
                 </ul>
-           </div>
-         </a>
-        
-       </div>
+              </div>
+             </a>
+          </div>
        <div class="footer-item c">
         <div class="social-network">
           <a href="https://facebook.com/payall" class="u-item" target="_blank">
@@ -300,7 +299,7 @@
              <i class="fa fa-facebook-square" aria-hidden="true"></i> 
             </div>
             <ul>
-              <li>Payall</li>
+              <li>Payallven</li>
             </ul>
            </div>
           </a>
@@ -336,21 +335,18 @@
             Copyright 2017 Payall
            </span>
           </div> 
-                
            <div class="floating-button-options">  
              <a href="http://74.81.77.204/settings/apk/download" class="btn btn-success btn-sm">
                <i class="fa fa-download" aria-hidden="true"></i>
-                Descargue app
+                Descargar app
               </a>
               <button id="btn-captacion" class="btn btn-primary btn-sm">
                <i class="fa fa-fw fa-money"></i>
                Recarga con nosotros
               </button>
            </div>
-           
         </div>
      </div>
-      
   </footer>
   <div class="modal fade" tabindex="-1" role="dialog" id="boxModal">
    <div class="modal-dialog" role="document">
@@ -636,13 +632,10 @@
 
         $.post(url, data)
           .done(function (res) {
-            console.log(res);
-            console.log('success')
             if (res.success) {
               contactMessageSuccess(res.mensaje);
               cleanForm($form);
             } else {
-              console.log(res)
               errorContacto(res.errors);
             }
 
